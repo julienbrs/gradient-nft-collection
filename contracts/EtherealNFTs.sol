@@ -21,7 +21,7 @@ contract EtherealNFTs is ERC721, Ownable {
     event NftMinted(address minter, uint256 tokenId);
 
     constructor(
-        string[30] memory gradienttokenURIs,
+        string[2] memory gradienttokenURIs,
         uint256 mintFee
     ) ERC721("Ethereal Gradient", "EGR") {
         i_mintFee = mintFee;
