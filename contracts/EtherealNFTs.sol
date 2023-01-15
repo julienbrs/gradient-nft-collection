@@ -28,17 +28,18 @@ contract EtherealNFTs is ERC721, Ownable {
         s_tokenURIs = gradienttokenURIs;
     }
 
-    function requestNFT() public payable {
+    function mintNFT() public payable {
         if (msg.value < i_mintFee) {
             revert EtherealNFTs__NeedMoreEthToMint();
         }
         s_tokenCounter++;
+        uint256 tokenId = s_tokenCounter;
         bytes32 seed = keccak256(abi.encodePacked(block.number));
         uint256 idURI = uint256(seed) % s_tokenURIs.length;
 
-        setTokenURI(s_tokenCounter, s_tokenURIs[idURI]);
-        _safeMint(msg.sender, s_tokenCounter);
-        emit NftMinted(msg.sender, s_tokenCounter);
+        setTokenURI(tokenId, s_tokenURIs[idURI]);
+        _safeMint(msg.sender, tokenId);
+        emit NftMinted(msg.sender, tokenId);
     }
 
     function setTokenURI(uint256 _tokenId, string memory _uri) public onlyOwner {

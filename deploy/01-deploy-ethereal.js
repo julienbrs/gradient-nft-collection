@@ -9,7 +9,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     const { deployer } = await getNamedAccounts()
     const chainId = network.config.chainId
 
-    let tokenURIs = [
+    let tokenUris = [
         "ipfs://QmUq49a6AipYFKUnwspAUmCBhPk1kENmSTtbMgr8QNYRDA",
         "ipfs://QmW9Bks8SCeAWp7MTb4K5HsFy3n4mRq1oPmfmQo9pcKQVb",
     ]
