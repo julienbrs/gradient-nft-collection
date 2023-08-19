@@ -1,13 +1,6 @@
-# Sample Hardhat Project
+# Gradient NFT Collection
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+NFT collection created with MidJourney to be used as example for the [dApp NFT Marketplace](https://github.com/julienbrs/nft-marketplace)
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+![Screenshot of dApp](https://github.com/julienbrs/nft-marketplace/raw/master/NFTMarketplace.png)
